@@ -73,14 +73,13 @@
   .place{font-family:var(--serif);font-size:clamp(1.25rem,4vw,1.6rem);margin-top:26px;line-height:1.3;font-weight:500}
   .place small{display:block;font-family:var(--sans);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mauve);margin-top:8px;font-weight:400}
   .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+  .actions .btn{padding-inline:38px}
   .btn{
     display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;
     background:var(--plum);color:#fff;text-decoration:none;font-size:.72rem;letter-spacing:.18em;font-weight:500;text-transform:uppercase;
     transition:background .2s,transform .2s;
   }
   .btn:hover{background:var(--deep);transform:translateY(-1px)}
-  .btn.ghost{background:transparent;color:var(--plum);border:1px solid var(--gold)}
-  .btn.ghost:hover{background:#FBF1F3}
 
   /* ---------- секции ---------- */
   .wrap{max-width:1040px;margin:0 auto;padding-inline:16px}
@@ -147,7 +146,6 @@
       <p class="place">Ресторан «Паштет»<small>ул. Толмачёва, 23 · Екатеринбург</small></p>
       <div class="actions">
         <a class="btn" href="https://yandex.ru/maps/?text=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9F%D0%B0%D1%88%D1%82%D0%B5%D1%82+%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0+23+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" target="_blank" rel="noopener">На карте</a>
-        <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D0%94%D0%B5%D0%BD%D1%8C+%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F+%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D1%8B+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BD%D1%8B&dates=20261010T110000Z/20261010T160000Z&location=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9F%D0%B0%D1%88%D1%82%D0%B5%D1%82%2C+%D1%83%D0%BB.+%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0+23%2C+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" target="_blank" rel="noopener">В календарь</a>
       </div>
     </div>
   </header>
@@ -161,9 +159,6 @@
         <div class="fact"><span class="label">Вход</span><span class="big">С переулка Почтового</span><span class="muted">не с Толмачёва — дверь за углом, на первом этаже</span></div>
         <div class="fact"><span class="label">Ориентир</span><span class="big">ТЦ «Сила Воли»</span><span class="muted">и резиденция губернатора через дорогу</span></div>
         <div class="fact"><span class="label">Столик</span><span class="big">На наше имя</span><span class="muted">скажите администратору, что вы на день рождения Светланы Павловны</span></div>
-      </div>
-      <div class="actions">
-        <a class="btn ghost" href="https://yandex.ru/maps/?text=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9F%D0%B0%D1%88%D1%82%D0%B5%D1%82+%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0+23+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" target="_blank" rel="noopener">Построить маршрут</a>
       </div>
     </div>
   </section>

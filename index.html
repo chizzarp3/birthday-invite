@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Праздник Светланы Павловны</title>
+<meta name="description" content="Приглашение на праздничный обед в честь дня рождения Светланы Павловны — 10 октября 2026, ресторан «Паштет», Екатеринбург">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap">
+<style>
+  :root{
+    --paper:#FBF5F6;          /* фон страницы */
+    --card:rgba(255,252,252,.90);
+    --plum:#4E3540;           /* основной текст */
+    --mauve:#8D6B76;          /* вторичный */
+    --deep:#B9647E;           /* акцент */
+    --line:#EBD3DA;
+    --gold:#C9A76B;
+    --serif:"Cormorant Garamond","Times New Roman",Georgia,serif;
+    --sans:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{color-scheme:light}
+  body{
+    margin:0;background:var(--paper);color:var(--plum);font-family:var(--sans);font-weight:300;
+    font-size:clamp(15px,1.05vw + 12px,17px);line-height:1.65;
+    padding:0;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  }
+  a{color:var(--deep)} a:focus-visible{outline:2px solid var(--deep);outline-offset:3px;border-radius:4px}
+  p{margin:0}
+  img{max-width:100%;display:block}
+
+  /* ---------- шапка: фото на весь экран + карточка ---------- */
+  .hero{
+    position:relative;min-height:100svh;
+    display:grid;place-items:center;
+    padding:clamp(24px,5vw,64px) 16px;
+    isolation:isolate;
+  }
+  .hero .bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+  .hero .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+  .hero .bg::after{          /* лёгкая вуаль, чтобы карточка читалась */
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.18));
+  }
+  .card{
+    position:relative;width:100%;max-width:640px;
+    background:var(--card);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    padding:clamp(48px,8vw,76px) clamp(22px,6vw,64px);
+    text-align:center;
+    box-shadow:0 40px 90px -40px rgba(78,53,64,.45),0 1px 2px rgba(78,53,64,.06);
+  }
+  .card::before{content:"";position:absolute;inset:12px;border:1px solid var(--gold);pointer-events:none;opacity:.9}
+  .eyebrow{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--mauve);font-weight:400;margin:0 0 24px}
+  .title{
+    font-family:var(--serif);font-weight:500;text-transform:uppercase;letter-spacing:.1em;
+    font-size:clamp(1.9rem,6.6vw,3.2rem);line-height:1.08;margin:0;
+  }
+  .title i{display:block;font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;font-size:.6em;color:var(--deep);margin-top:8px}
+  .name{
+    font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,6vw,2.7rem);line-height:1.15;margin:22px 0 0;letter-spacing:.01em;
+  }
+  .name small{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:.5em;color:var(--mauve);margin-bottom:6px;letter-spacing:0}
+  .date{
+    margin:30px auto 0;display:flex;justify-content:center;align-items:center;
+    font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,7vw,3rem);line-height:1;font-variant-numeric:tabular-nums;
+  }
+  .date span{padding:0 .45em}
+  .date span + span{border-left:1px solid var(--gold)}
+  .meta{margin-top:12px;font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--mauve);font-weight:400}
+  .place{font-family:var(--serif);font-size:clamp(1.25rem,4vw,1.6rem);margin-top:26px;line-height:1.3;font-weight:500}
+  .place small{display:block;font-family:var(--sans);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mauve);margin-top:8px;font-weight:400}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:32px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;padding:13px 26px;
+    background:var(--plum);color:#fff;text-decoration:none;font-size:.72rem;letter-spacing:.18em;font-weight:500;text-transform:uppercase;
+    transition:background .2s,transform .2s;
+  }
+  .btn:hover{background:var(--deep);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--plum);border:1px solid var(--gold)}
+  .btn.ghost:hover{background:#FBF1F3}
+
+  /* ---------- секции ---------- */
+  .wrap{max-width:1040px;margin:0 auto;padding-inline:16px}
+  section.text{padding-block:clamp(56px,9vw,100px);text-align:center}
+  .divider{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:0 0 26px}
+  .divider::before,.divider::after{content:"";height:1px;width:min(120px,24%);background:linear-gradient(90deg,transparent,var(--gold))}
+  .divider::after{background:linear-gradient(90deg,var(--gold),transparent)}
+  .divider i{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,5vw,2.6rem);line-height:1.1;margin:0 0 8px;text-wrap:balance}
+  .sub{color:var(--mauve);margin:0 auto 34px;max-width:48ch;text-wrap:balance}
+
+  .facts{display:grid;grid-template-columns:1fr;gap:28px;max-width:860px;margin:0 auto}
+  .fact{display:flex;flex-direction:column;gap:6px;align-items:center}
+  .fact .label{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--deep);font-weight:500}
+  .fact .big{font-family:var(--serif);font-size:clamp(1.7rem,5vw,2.2rem);font-weight:500;line-height:1.1}
+  .fact .muted{color:var(--mauve);font-size:.93em;max-width:28ch;text-wrap:balance}
+
+  /* фото-полоса между секциями */
+  .band{display:grid;grid-template-columns:1fr;gap:6px;padding-inline:6px}
+  .band figure{margin:0;aspect-ratio:4/3;overflow:hidden}
+  .band img{width:100%;height:100%;object-fit:cover}
+  .band figure:nth-child(2){display:none}
+  .band.single{grid-template-columns:1fr}
+  .band.single figure{aspect-ratio:16/9}
+  .band.single img{object-position:50% 40%}
+
+  .timeline{list-style:none;margin:0 auto;padding:0;max-width:480px;text-align:left}
+  .timeline li{display:grid;grid-template-columns:76px 1fr;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+  .timeline li:last-child{border-bottom:0}
+  .timeline time{font-family:var(--serif);font-size:1.55rem;font-weight:500;color:var(--deep);font-variant-numeric:tabular-nums}
+  .timeline .t{font-weight:400;font-size:1.03em}
+  .timeline .d{color:var(--mauve);font-size:.92em}
+
+  /* финал: фото + карточка */
+  .closing{position:relative;min-height:80svh;display:grid;place-items:center;padding:clamp(40px,7vw,80px) 16px;isolation:isolate}
+  .closing .bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
+  .closing .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+  .closing .card{max-width:560px;padding:clamp(40px,7vw,60px) clamp(22px,6vw,56px)}
+  .sig{font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,4.6vw,2.2rem);max-width:24ch;margin:0 auto;line-height:1.25;text-wrap:balance}
+  .from{margin-top:16px;color:var(--mauve);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase}
+  .countdown{margin-top:22px;font-family:var(--serif);font-size:1.2rem;color:var(--deep)}
+  .countdown b{font-weight:600;font-variant-numeric:tabular-nums}
+  footer{text-align:center;color:var(--mauve);font-size:.72rem;letter-spacing:.1em;padding:28px 16px 32px}
+
+  @media (min-width:720px){
+    .facts{grid-template-columns:1fr 1fr 1.25fr;gap:0}
+    .fact{padding:8px 20px;border-right:1px solid var(--line)}
+    .fact:last-child{border-right:0}
+    .band{grid-template-columns:1fr 1fr}
+    .band figure{aspect-ratio:3/2}
+    .band figure:nth-child(2){display:block}
+  }
+  @media (min-width:960px){
+    .timeline{max-width:none;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+    .timeline::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line)}
+    .timeline li{display:flex;flex-direction:column;gap:4px;align-items:flex-start;padding:28px 26px 0 0;border-bottom:0;position:relative}
+    .timeline li::before{content:"";position:absolute;left:0;top:4px;width:11px;height:11px;border-radius:50%;background:var(--deep);box-shadow:0 0 0 4px var(--paper)}
+    .timeline time{font-size:1.8rem}
+    .band figure{aspect-ratio:16/10}
+    .band.single figure{aspect-ratio:21/9}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .hero .card{animation:rise 1.1s ease both .15s}
+    @keyframes rise{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="bg" aria-hidden="true"><img src="img/hero-peonies.jpg" alt="" fetchpriority="high"></div>
+    <div class="card">
+      <p class="eyebrow">Дорогие родные и друзья</p>
+      <h1 class="title">Приглашаем<i>на праздничный обед</i></h1>
+      <p class="name"><small>в честь дня рождения</small>Светланы Павловны</p>
+      <div class="date" aria-label="10 октября 2026"><span>10</span><span>10</span><span>2026</span></div>
+      <p class="meta">суббота · в 14:00</p>
+      <p class="place">Ресторан «Паштет»<small>ул. Толмачёва, 23 · Екатеринбург</small></p>
+      <div class="actions">
+        <a class="btn" href="https://yandex.ru/maps/?text=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9F%D0%B0%D1%88%D1%82%D0%B5%D1%82+%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0+23+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" target="_blank" rel="noopener">На карте</a>
+        <a class="btn ghost" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%D0%94%D0%B5%D0%BD%D1%8C+%D1%80%D0%BE%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D1%8F+%D0%A1%D0%B2%D0%B5%D1%82%D0%BB%D0%B0%D0%BD%D1%8B+%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B2%D0%BD%D1%8B&dates=20261010T090000Z/20261010T140000Z&location=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9F%D0%B0%D1%88%D1%82%D0%B5%D1%82%2C+%D1%83%D0%BB.+%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0+23%2C+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" target="_blank" rel="noopener">В календарь</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="text" id="where">
+    <div class="wrap">
+      <div class="divider" aria-hidden="true"><i></i></div>
+      <h2>Как добраться</h2>
+      <p class="sub">Ресторан «Паштет» стоит в самом центре — на углу улицы Толмачёва и переулка Почтового, напротив резиденции губернатора.</p>
+      <div class="facts">
+        <div class="fact"><span class="label">Вход</span><span class="big">С переулка Почтового</span><span class="muted">не с Толмачёва — дверь за углом, на первом этаже</span></div>
+        <div class="fact"><span class="label">Ориентир</span><span class="big">ТЦ «Сила Воли»</span><span class="muted">и резиденция губернатора через дорогу</span></div>
+        <div class="fact"><span class="label">Столик</span><span class="big">На наше имя</span><span class="muted">скажите администратору, что вы на день рождения Светланы Павловны</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn ghost" href="https://yandex.ru/maps/?text=%D0%A0%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD+%D0%9F%D0%B0%D1%88%D1%82%D0%B5%D1%82+%D0%A2%D0%BE%D0%BB%D0%BC%D0%B0%D1%87%D1%91%D0%B2%D0%B0+23+%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3" target="_blank" rel="noopener">Построить маршрут</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="band" aria-hidden="true">
+    <figure><img src="img/band-roses.jpg" alt="" loading="lazy"></figure>
+    <figure><img src="img/band-hydrangea.jpg" alt="" loading="lazy"></figure>
+  </div>
+
+  <section class="text" id="program">
+    <div class="wrap">
+      <div class="divider" aria-hidden="true"><i></i></div>
+      <h2>Программа дня</h2>
+      <p class="sub">Без спешки и формальностей — просто хороший день в кругу близких.</p>
+      <ul class="timeline">
+        <li><time>14:00</time><div><div class="t">Сбор гостей</div><div class="d">Приветственные бокалы, знакомимся и рассаживаемся</div></div></li>
+        <li><time>14:30</time><div><div class="t">Праздничный обед</div><div class="d">Домашняя кухня «Паштета» и первые тосты</div></div></li>
+        <li><time>16:00</time><div><div class="t">Тёплые слова</div><div class="d">Поздравления от родных и друзей</div></div></li>
+        <li><time>17:30</time><div><div class="t">Торт и чай</div><div class="d">Общее фото на память</div></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="band single" aria-hidden="true">
+    <figure><img src="img/roses-pale.jpg" alt="" loading="lazy"></figure>
+  </div>
+
+  <section class="closing">
+    <div class="bg" aria-hidden="true"><img src="img/closing-peonies.jpg" alt="" loading="lazy"></div>
+    <div class="card">
+      <p class="sig">Будем очень рады видеть вас и провести этот день вместе</p>
+      <p class="from">С любовью, ваша семья</p>
+      <p class="countdown" id="countdown" hidden>До праздника осталось <b id="days"></b></p>
+    </div>
+  </section>
+
+  <footer>10 · 10 · 2026 · Екатеринбург</footer>
+
+<script>
+(function(){
+  var days = Math.ceil((new Date(2026,9,10,14,0,0) - new Date()) / 86400000);
+  if (days <= 0) return;
+  var n = days % 100, w = 'дней';
+  if (n < 10 || n > 20) { var u = n % 10; if (u === 1) w = 'день'; else if (u >= 2 && u <= 4) w = 'дня'; }
+  document.getElementById('days').textContent = days + ' ' + w;
+  document.getElementById('countdown').hidden = false;
+})();
+</script>
+</body>
+</html>

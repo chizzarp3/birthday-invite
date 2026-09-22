@@ -4,4 +4,3 @@
 - band-hydrangea.jpg — https://unsplash.com/photos/ENIERs50JX8
 - closing-peonies.jpg — peter bucks, https://unsplash.com/photos/hY4TcvzyPlw
 - band-roses.jpg — пионовидные розы, https://unsplash.com/photos/oEWdQsbRVZk
-- roses-pale.jpg — пионовидные розы, https://unsplash.com/photos/ktzSt2uT1po
